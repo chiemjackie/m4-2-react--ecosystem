@@ -78,7 +78,11 @@ All routes must be nested under a router
 ---
 
 ```jsx
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App(props) {
   return (

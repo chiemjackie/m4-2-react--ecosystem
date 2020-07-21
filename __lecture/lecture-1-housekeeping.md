@@ -24,12 +24,12 @@ in App (at src/index.js:31)
 
 ```js
 const items = [
-    { id: '123', text: 'Item 1' },
-    { id: '456', text: 'Item 2' },
+    { text: 'Item 1' },
+    { text: 'Item 2' },
 ]
 
 const Bacon = ({ items }) => (
-    {items.map(item => <li>{item.text}</li>)}
+    {items.map((item, index) => <li key={`item-$[index}`}>{item.text}</li>)}
 );
 ```
 
@@ -93,19 +93,20 @@ export default data;
 
 ```js
 // src/index.js
-import theBestData from "./data";
+import literallyanything from "./data";
 ```
 
 ---
 
 ```js
 // src/data.js
+
 export const MAGIC_NUMBER = 123;
 ```
 
 ```js
 // src/index.js
-import MAGIC_NUMBER from "./data";
+import { MAGIC_NUMBER } from "./data";
 ```
 
 ---
@@ -122,14 +123,20 @@ export default data;
 
 ```js
 // src/index.js
-import { data, users } from "./data";
+import data from "./data";
+// import { users, sessions } from "./data";
 ```
 
 ---
 
 ```js
 // src/data.js
-export default const baseball = '⚾️';
+const baseball = '⚾️';
+
+export default baseball;
+
+// export default baseball = '⚾️';
+// export const baseball = '⚾️';
 
 ```
 

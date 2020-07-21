@@ -124,12 +124,29 @@ function App(props) {
 ```
 
 ```jsx
+const button = styled.button `
+  color: tomato;
+  font-weight: bold;
+  padding: 20px;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-3px);
+  }
+`;
+
+const Icon = styled.i`
+  width: 32px;
+  height: 32px;
+`;
 function IconButton(props) {
   return (
-    <button className="btn">
-      <i className="icon">{props.icon}</i>
+    <Button>
+      <Icon>
+        {props.icon}
+      </Icon>
       {props.children}
-    </button>
+    </Button>
   );
 }
 ```
@@ -155,13 +172,27 @@ function IconButton(props) {
 ```
 
 ```jsx
+const Paragraph = styled.paragraph`
+  font-size: 18px;
+  line-height: 1.4;
+  color: #333;
+
+  &:strong {
+    color: red;
+  }
+
+  &:em {
+    color: #666;
+  }
+`;
+
 function FantasticStory(props) {
   return (
     <div>
-      <p className="paragraph">
+      <Paragraph>
         The <strong>quick</strong> red fox jumped over the <em>lazy</em> dog.
-      </p>
-      <p>The end.</p>
+      </Paragraph>
+      <Paragraph>The end.</Paragraph>
     </div>
   );
 }
