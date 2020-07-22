@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import styled from 'styled-components';
+import styled from "styled-components";
 import Header from './Header.js'
 
 const Homepage = () => {
-  return <span>Homepage</span>
+  return <div>Homepage</div>
 }
 
 const About = () => {
-  return <span>About</span>
+  return <div>About</div>
 }
 
 const App = () => {
