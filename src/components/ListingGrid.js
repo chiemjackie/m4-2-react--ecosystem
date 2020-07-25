@@ -1,13 +1,14 @@
 import React from "react";
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 const FruitContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
 `;
 
-const FruitTile = styled.div`
+const FruitTile = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,11 +48,12 @@ const ListingGrid = ({ items }) => {
   return (
     <FruitContainer>
       {items.map(item => {
+        console.log(item)
         return (
-          <FruitTile key={item.id}>
+          <FruitTile key={item.id} to={`/items/${item.id}`}>
             <FruitImage src={item.imageSrc} />
             <FruitName>{item.name}</FruitName>
-            <Underline/>
+            <Underline />
             <Italics>{item.latinName}</Italics>
           </FruitTile>
         )

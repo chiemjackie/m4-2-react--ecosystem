@@ -5,21 +5,23 @@ import GlobalStyles from './GlobalStyles';
 import Header from './Header';
 import Homepage from './Homepage';
 import About from './About';
+import ItemDetails from './ItemDetails'
 
 const App = ({ items }) => {
   return (
-    <Router>
-      <link
-        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;900&display=swap"
-        rel="stylesheet"
-      />
+    <div>
       <GlobalStyles />
-      <Header />
-      <Switch>
-        <Route exact path='/'><Homepage items={items} /></Route>
-        <Route exact path='/about'><About /></Route>
-      </Switch>
-    </Router>
+      <Router>
+        <div>
+          <Header />
+          <Switch>
+            <Route exact path='/'><Homepage items={items} /></Route>
+            <Route exact path='/items/:itemId'><ItemDetails /></Route>
+            <Route exact path='/about'><About /></Route>
+          </Switch>
+        </div>
+      </Router>
+    </div>
   );
 };
 
