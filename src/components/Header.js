@@ -10,7 +10,7 @@ const Nav = styled.header`
   justify-content: space-between;
   padding: 0 20px;
   height: 90px;
-  margin-bottom: 80px;
+  margin: 2rem 3.6rem 4rem;
 `;
 
 const Navbar = styled.nav`
@@ -22,7 +22,7 @@ const Navbar = styled.nav`
 `;
 
 const Heading = styled.h1`
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
 `;
 

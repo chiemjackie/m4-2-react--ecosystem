@@ -18,8 +18,7 @@ export const items = {
         id: 'a',
         name: 'Avocado',
         latinName: 'Persea americana',
-        description:
-            "An oddly creamy fruit. Surprisingly high in protein. Has a big pit in the middle.  You're not supposed to eat the rind. Millenials like to put it on toast, for reasons not entirely understood.",
+        description: "An oddly creamy fruit. Surprisingly high in protein. Has a big pit in the middle.  You're not supposed to eat the rind. Millenials like to put it on toast, for reasons not entirely understood.",
         imageSrc: '/assets/avocado.jpg',
         countryOfOrigin: 'Mexico',
         sellerId: 'alice',
@@ -74,8 +73,7 @@ export const items = {
         id: 'f',
         name: 'Blue Lemon',
         latinName: 'Citrus limon caeruleum',
-        description:
-            'Fantastical, mythological item. Exists only in other universes',
+        description: 'Fantastical, mythological item. Exists only in other universes',
         imageSrc: '/assets/blue-lemon.jpg',
         countryOfOrigin: 'Valhalla',
         sellerId: 'bob',
